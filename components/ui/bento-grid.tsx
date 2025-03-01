@@ -7,9 +7,13 @@ import animationData from "@/data/confetti.json";
 import { cn } from "@/lib/utils";
 
 import { BackgroundGradientAnimation } from "./background-gradient-animation";
-import MagicButton from "./MagicButton";
 import dynamic from "next/dynamic";
+import MagicButton from "./MagicButton";
 // import GlobeDemo from "./GlobeDemo";
+// import GlobeGL from "./GlobeGL";
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
+const GlobeGL = dynamic(() => import('@/components/ui/GlobeGL'), { ssr: false });
 
 export const BentoGrid = ({className,children} : {className?:string; children?: React.ReactNode;}) => {
     return (
@@ -29,10 +33,6 @@ export const BentoGridItem = ({id,className,title,description,img,imgClassName,t
         navigator.clipboard.writeText(text);
         setCopied(true);
     };
-    const Lottie = dynamic(() => import('lottie-react'), { 
-        ssr: false 
-    });
-      
 
     return (
         <div className={cn("row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4", className)} style={{background:"rgb(4,7,29)", backgroundColor:"linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)"}}>
@@ -59,6 +59,7 @@ export const BentoGridItem = ({id,className,title,description,img,imgClassName,t
     
                     {/* Github Globe */}
                     {/* {id===2 && <GlobeDemo />} */}
+                    {id===2 && <GlobeGL />}
 
                     {id===3 && (
                         <div className="absolute w-fit -right-3 lg:-right-2 flex gap-1 lg:gap-5">
