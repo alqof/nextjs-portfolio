@@ -3,19 +3,15 @@
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import animationData from "@/data/confetti.json";
-
 import { cn } from "@/lib/utils";
-
 import { BackgroundGradientAnimation } from "./background-gradient-animation";
 import dynamic from "next/dynamic";
 import MagicButton from "./MagicButton";
-// import GlobeDemo from "./GlobeDemo";
-// import GlobeGL from "./GlobeGL";
 
 const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 const GlobeGL = dynamic(() => import('@/components/ui/GlobeGL'), { ssr: false });
 
-export const BentoGrid = ({className,children} : {className?:string; children?: React.ReactNode;}) => {
+export const BentoGrid = ({className, children} : {className?:string; children?: React.ReactNode;}) => {
     return (
         <div className={cn("grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto", className)}>
             {children}
@@ -23,7 +19,7 @@ export const BentoGrid = ({className,children} : {className?:string; children?: 
     );
 };
 
-export const BentoGridItem = ({id,className,title,description,img,imgClassName,titleClassName,spareImg} : { id:number; className?:string; title?:string | React.ReactNode; description?:string | React.ReactNode; img?:string; imgClassName?:string; titleClassName?:string; spareImg?:string;}) => {
+export const BentoGridItem = ({id,className,title,description,img,imgClassName,titleClassName,spareImg}: { id:number; className?:string; title?:string | React.ReactNode; description?:string | React.ReactNode; img?:string; imgClassName?:string; titleClassName?:string; spareImg?:string;}) => {
     const leftLists = ["ReactJS", "Express", "Typescript"];
     const rightLists = ["Vite", "NextJS", "PostgreSQL"];
 
@@ -36,7 +32,6 @@ export const BentoGridItem = ({id,className,title,description,img,imgClassName,t
 
     return (
         <div className={cn("row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4", className)} style={{background:"rgb(4,7,29)", backgroundColor:"linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)"}}>
-            {/* add img divs */}
             <div className={`${id===6 && "flex justify-center"} h-full`}>
                 <div className="absolute w-full h-full">
                     { img && (<img src={img} alt={img} className={cn(imgClassName, "object-cover object-center ")}/>) }

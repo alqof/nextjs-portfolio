@@ -5,7 +5,7 @@ import Globe from 'globe.gl';
 
 const GlobeGL = ()=>{
     useEffect(()=>{
-        const N = 30;
+        const N = 20;
         const arcsData = [...Array(N).keys()].map(() => ({
             startLat: (Math.random() - 0.5) * 180,
             startLng: (Math.random() - 0.5) * 360,
@@ -36,7 +36,7 @@ const GlobeGL = ()=>{
                 .arcDashAnimateTime(() => Math.random() * 4000 + 500);
             world.controls().enableZoom = false
             world.controls().autoRotate = true;
-            world.controls().autoRotateSpeed = 0.7;
+            world.controls().autoRotateSpeed = 0.8;
         }
     }, []);
 
@@ -46,5 +46,4 @@ const GlobeGL = ()=>{
         </div>
     );
 };
-
 export default GlobeGL;
