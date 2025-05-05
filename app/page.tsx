@@ -5,13 +5,13 @@ import { useEffect, useState } from "react";
 import Hero from "@/components/Hero";
 import Grid from "@/components/Grid";
 import RecentPorjects from "@/components/RecentPorjects";
-import Clients from "@/components/Clients";
 import Experience from "@/components/Experience";
 import Approach from "@/components/Approach";
 
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { navItems } from "@/data";
 import Footer from "@/components/Footer";
+import ProjectsExperience from '@/components/ProjectsExperience';
 
 
 export default function Home(){
@@ -35,7 +35,7 @@ export default function Home(){
                 <Hero />
                 <Grid />
                 <RecentPorjects />
-                <Clients />
+                <ProjectsExperience />
                 <Experience />
                 <Approach />
                 <Footer />

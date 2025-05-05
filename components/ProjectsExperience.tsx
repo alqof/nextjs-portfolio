@@ -5,12 +5,12 @@ import React from "react";
 import { companies, testimonials } from "@/data";
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 
-const Clients = () => {
+const ProjectsExperience = () => {
     return (
         <section id="testimonials">
             <div className="py-20">
                 <h1 className="heading">
-                    Kind words from <span className="text-purple"> satisfied clients</span>
+                    Kind systems from <span className="text-purple"> work experience </span>
                 </h1>
 
                 <div className="max-lg:mt-10 flex flex-col items-center">
@@ -33,5 +33,4 @@ const Clients = () => {
         </section>
     );
 };
-
-export default Clients;
+export default ProjectsExperience;

@@ -9,14 +9,13 @@ export const navItems = [
 export const gridItems = [
     {
         id: 1,
-        title: "Focused on creating innovative digital solutions, from web development to modern technology-based systems.",
         // title: "I prioritize client collaboration, fostering open communication ",
+        title: "Focused on creating innovative digital solutions, from web development to modern technology-based systems.",
         description: "",
         className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
         imgClassName: "w-full h-full",
         titleClassName: "justify-end",
-        // img: "/b1.svg",
-        img: "/b1a-min.png",
+        img: "/b1a.jpg",
         spareImg: "",
     },
     {
@@ -138,33 +137,45 @@ export const testimonials = [
 export const companies = [
     {
         id: 1,
+        name: "HOSTINGER",
+        img: "/hostinger.svg",
+        nameImg: "/hostingerName.svg",
+    },
+    {
+        id: 6,
+        name: "vercel",
+        img: "/vercel.svg",
+        nameImg: "/vercelName.svg",
+    },
+    {
+        id: 2,
+        name: "docker.",
+        img: "/docker.svg",
+        nameImg: "/dockerName.svg",
+    },
+    {
+        id: 7,
+        name: "github",
+        img: "/github.svg",
+        nameImg: "/githubName.svg",
+    },
+    {
+        id: 3,
         name: "cloudinary",
         img: "/cloud.svg",
         nameImg: "/cloudName.svg",
     },
     {
-        id: 2,
+        id: 4,
         name: "appwrite",
         img: "/app.svg",
         nameImg: "/appName.svg",
     },
     {
-        id: 3,
-        name: "HOSTINGER",
-        img: "/host.svg",
-        nameImg: "/hostName.svg",
-    },
-    {
-        id: 4,
+        id: 5,
         name: "stream",
         img: "/s.svg",
         nameImg: "/streamName.svg",
-    },
-    {
-        id: 5,
-        name: "docker.",
-        img: "/dock.svg",
-        nameImg: "/dockerName.svg",
     },
 ];
 
@@ -172,30 +183,32 @@ export const workExperience = [
     {
         id: 1,
         title: "Frontend Engineer Intern",
-        desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+        desc: "Assisted in the development of a web-based platform using Laravel and React Framework, enhancing interactivity.",
         className: "md:col-span-2",
         thumbnail: "/exp1.svg",
     },
     {
         id: 2,
-        title: "Mobile App Dev - JSM Tech",
-        desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-        className: "md:col-span-2", // change to md:col-span-2
-        thumbnail: "/exp2.svg",
+        title: "Fullstack Developer",
+        desc: "Designed, developed, and maintained full-stack web applications using modern frontend and backend technologies.",
+        // desc: "Developed and maintained user-facing features using modern frontend technologies.",
+        className: "md:col-span-2",
+        thumbnail: "/exp4.svg",
     },
     {
         id: 3,
-        title: "Freelance App Dev Project",
-        desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-        className: "md:col-span-2", // change to md:col-span-2
-        thumbnail: "/exp3.svg",
+        title: "Mobile App Dev",
+        desc: "Designed and developed mobile app for Android platforms using Kotlin",
+        // desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
+        className: "md:col-span-2",
+        thumbnail: "/exp2.svg",
     },
     {
         id: 4,
-        title: "Lead Frontend Developer",
-        desc: "Developed and maintained user-facing features using modern frontend technologies.",
+        title: "Freelance App Dev Project",
+        desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
         className: "md:col-span-2",
-        thumbnail: "/exp4.svg",
+        thumbnail: "/exp3.svg",
     },
 ];
 
