@@ -5,23 +5,25 @@ import { useEffect, useState } from "react";
 import Hero from "@/components/Hero";
 import Grid from "@/components/Grid";
 import RecentPorjects from "@/components/RecentPorjects";
-import Experience from "@/components/Experience";
+import Experience from "@/components/WorkExperience";
 import Approach from "@/components/Approach";
 
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { navItems } from "@/data";
 import Footer from "@/components/Footer";
 import ProjectsExperience from '@/components/ProjectsExperience';
+import WorkExperience from '@/components/WorkExperience';
 
 
 export default function Home(){
     const [isClient, setIsClient] = useState(false);
     const router = useRouter();
 
-    useEffect(() => {
+    useEffect(()=>{
         setIsClient(true);
     }, []);
-    useEffect(() => {
+
+    useEffect(()=>{
         if (isClient) {
             router.push('/');
         }
@@ -36,7 +38,7 @@ export default function Home(){
                 <Grid />
                 <RecentPorjects />
                 <ProjectsExperience />
-                <Experience />
+                <WorkExperience />
                 <Approach />
                 <Footer />
             </div>

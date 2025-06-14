@@ -8,23 +8,23 @@ const RecentPorjects = () => {
         <section id="projects">
             <div className="py-20">
                 <h1 className="heading"> 
-                    A small selection of{" "} <span className="text-purple">recent projects</span> 
+                    A small selection of <span className="text-purple">recent projects</span> 
                 </h1>
 
                 <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
                     {projects.map((item) => (
                         <div key={item.id} className="w-[80vw] h-[25rem] lg:min-h-[32.5rem] sm:w-96 flex items-center justify-center">
                             {/* 3D Pin */}
-                            <PinContainer title="/ui.aceternity.com" href="https://twitter.com/mannupaaji">
+                            <PinContainer title={item.link} href={item.link} onClick={(e: any) => {e.preventDefault(); window.open(item.link, "_blank")}}>
                                 <div className="relative w-[80vw] h-[20vh] sm:w-96 lg:h-[30vh] mb-10 flex items-center justify-center overflow-hidden">
-                                    <div className="relative w-full h-full overflow-hidden lg:rounded-2xl" style={{ backgroundColor: "#13162D" }}>
+                                    <div className="relative w-full h-full overflow-hidden lg:rounded-2xl" style={{backgroundColor: "#13162D"}}>
                                         <img src="/bg.png" alt="bgimg" />
                                     </div>
                                     <img src={item.img} alt="cover" className="z-10 absolute bottom-0"/>
                                 </div>
 
                                 <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1"> {item.title} </h1>
-                                <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2" style={{ color: "#BEC1DD", margin: "1vh 0", }}> {item.des} </p>
+                                <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2" style={{color: "#BEC1DD", margin: "1vh 0"}}> {item.des} </p>
 
                                 <div className="flex items-center justify-between mt-7 mb-3">
                                     <div className="flex items-center">

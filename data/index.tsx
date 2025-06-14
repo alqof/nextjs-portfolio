@@ -2,7 +2,7 @@ export const navItems = [
     { name: "Home", link: "#home" },
     { name: "About", link: "#about" },
     { name: "Projects", link: "#projects" },
-    { name: "Testimonials", link: "#testimonials" },
+    { name: "Experience", link: "#experience" },
     { name: "Contact", link: "#contact" },
 ];
   
@@ -74,36 +74,36 @@ export const gridItems = [
 export const projects = [
     {
         id: 1,
-        title: "3D Solar System Planets to Explore",
-        des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
+        title: "ACME - Simple Dashboard Management",
+        des: "This is the example for the Next.js Learn Course with App Router, brought to showing, managing and monitoring of informations.",
         img: "/p1.svg",
         iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-        link: "/ui.earth.com",
-    },
-    {
-        id: 2,
-        title: "Yoom - Video Conferencing App",
-        des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-        img: "/p2.svg",
-        iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-        link: "/ui.yoom.com",
-    },
-    {
-        id: 3,
-        title: "AI Image SaaS - Canva Application",
-        des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-        img: "/p3.svg",
-        iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-        link: "/ui.aiimg.com",
+        link: "https://nextjs-dashboard-nine-chi.vercel.app/",
     },
     {
         id: 4,
-        title: "Animated Apple Iphone 3D Website",
-        des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
+        title: "Apple - Iphone 15 3D Website",
+        des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects.",
         img: "/p4.svg",
         iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-        link: "/ui.apple.com",
+        link: "https://vite-iphone15.vercel.app/",
     },
+    {
+        id: 3,
+        title: "Intellicaxt - AI Image SaaS",
+        des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
+        img: "/p3.svg",
+        iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+        link: "https://nextjs-intellicaxt.vercel.app/",
+    },
+    // {
+    //     id: 2,
+    //     title: "Yoom - Video Conferencing App",
+    //     des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
+    //     img: "/p2.svg",
+    //     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    //     link: "/ui.yoom.com",
+    // },
     ];
 
 export const testimonials = [
