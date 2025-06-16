@@ -86,4 +86,24 @@
   .black-gradient {
     background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
   }
+
+  /* Page - RecentPorjects */
+  .via-emerald-400\/90-red {
+    --tw-gradient-to: rgb(52 211 153 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), rgba(255, 0, 0, 0.9) var(--tw-gradient-via-position), var(--tw-gradient-to);
+  }
+  .to-cyan-500-red{
+    --tw-gradient-to: #ff0000 var(--tw-gradient-to-position);
+  }
+  .bg-cyan-600-red {
+    --tw-bg-opacity: 1;
+    background-color: rgb(178 8 8);
+  }
+  .bg-cyan-300-red {
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 103 103);
+  }
+  .bg-sky-500\/\[0\.08\]-red {
+    background-color: rgba(233, 14, 14, 0.16);
+  }
 }
