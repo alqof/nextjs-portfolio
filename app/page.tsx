@@ -13,6 +13,7 @@ import { navItems } from "@/data";
 import Footer from "@/components/Footer";
 import ProjectsExperience from '@/components/ProjectsExperience';
 import WorkExperience from '@/components/WorkExperience';
+import WorkProjectExperience from '@/components/WorkProjectExperience';
 
 
 export default function Home(){
@@ -37,6 +38,7 @@ export default function Home(){
                 <Hero />
                 <Grid />
                 <RecentPorjects />
+                {/* <WorkProjectExperience /> */}
                 <ProjectsExperience />
                 <WorkExperience />
                 <Approach />

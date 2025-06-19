@@ -1,4 +1,4 @@
-import { FaLocationArrow } from "react-icons/fa6";
+import { FaLocationArrow, FaMessage } from "react-icons/fa6";
 import { socialMedia } from "@/data";
 import MagicButton from "./ui/MagicButton";
 import Image from 'next/image';
@@ -19,8 +19,8 @@ const Footer = () => {
                     Reach out to me today and let&apos;s discuss how I can help you achieve your goals.
                 </p>
 
-                <a href="mailto:contact@jsmastery.pro">
-                    <MagicButton title="Let's get in touch" icon={<FaLocationArrow />} position="right"/>
+                <a href="mailto:alqofnuraji@gmail.com">
+                    <MagicButton title="Let’s work together!" icon={<FaMessage />} position="right"/>
                 </a>
             </div>
 
