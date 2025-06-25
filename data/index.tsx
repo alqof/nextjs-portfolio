@@ -269,11 +269,11 @@ export const workExperience = [
 export const socialMedia = [
     {
         img: "/insta.svg",
-        src: "https://www.instagram.com/qoppzzz/"
+        src: ""
     },
     {
         img: "/twit.svg",
-        src: "https://x.com/alqofnuraji"
+        src: ""
     },
     {
         img: "/git.svg",
