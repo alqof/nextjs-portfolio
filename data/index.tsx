@@ -51,7 +51,7 @@ export const gridItems = [
     {
         id: 5,
         // title: "Currently building a JS Animation library",
-        title: "Currently building a Real Software as a Service Application",
+        title: "On a journey to build a lean ERP that fits real-world small business workflows",
         description: "The Inside Scoop",
         className: "md:col-span-3 md:row-span-2",
         imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -75,25 +75,25 @@ export const projects = [
     {
         id: 1,
         title: "ACME - Simple Dashboard Management",
-        des: "This is the example for the Next.js Learn Course with App Router, brought to showing, managing and monitoring of informations.",
-        img: "/p1.svg",
-        iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
+        des: "This is a foundational application built with Next.js App Router, designed to display, manage, and monitor information effectively as part of the Next.js Learn Course.",
+        img: "/p1a.svg",
+        iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/postgresql.svg"],
         link: "https://nextjs-dashboard-nine-chi.vercel.app/",
     },
     {
         id: 2,
-        title: "Apple - Iphone 15 3D Website",
+        title: "Apple - Iphone 15 Pro 3D Website",
         des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects.",
-        img: "/p4.svg",
-        iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+        img: "/p2a.svg",
+        iconLists: ["/vite.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
         link: "https://vite-iphone15.vercel.app/",
     },
     {
         id: 3,
         title: "Intellicaxt - AI Image SaaS",
         des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-        img: "/p3.svg",
-        iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+        img: "/p3a.svg",
+        iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/cloudinary-icon.svg", "/c.svg"],
         link: "https://nextjs-intellicaxt.vercel.app/",
     },
     // {
@@ -106,71 +106,71 @@ export const projects = [
     // },
     ];
 
-export const testimonials = [
-    {
-        name: "System Dummy 1",
-        title: "Lorem ipsum dolor sit",
-        quote: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt recusandae in, voluptates eligendi suscipit eum aliquid deleniti qui quibusdam culpa nobis consectetur, et dignissimos quos dolorem ex esse magni error officiis. Porro nisi, hic veritatis eaque ullam est sint, delectus vel et iste nesciunt, natus exercitationem voluptatum velit tempore. Minus!",
-    },
-    {
-        name: "System Dummy 2",
-        title: "Lorem ipsum dolor sit",
-        quote: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt recusandae in, voluptates eligendi suscipit eum aliquid deleniti qui quibusdam culpa nobis consectetur, et dignissimos quos dolorem ex esse magni error officiis. Porro nisi, hic veritatis eaque ullam est sint, delectus vel et iste nesciunt, natus exercitationem voluptatum velit tempore. Minus!",
-    },
-    {
-        name: "System Dummy 3",
-        title: "Lorem ipsum dolor sit",
-        quote: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt recusandae in, voluptates eligendi suscipit eum aliquid deleniti qui quibusdam culpa nobis consectetur, et dignissimos quos dolorem ex esse magni error officiis. Porro nisi, hic veritatis eaque ullam est sint, delectus vel et iste nesciunt, natus exercitationem voluptatum velit tempore. Minus!",
-    },
-    {
-        name: "System Dummy 4",
-        title: "Lorem ipsum dolor sit",
-        quote: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt recusandae in, voluptates eligendi suscipit eum aliquid deleniti qui quibusdam culpa nobis consectetur, et dignissimos quos dolorem ex esse magni error officiis. Porro nisi, hic veritatis eaque ullam est sint, delectus vel et iste nesciunt, natus exercitationem voluptatum velit tempore. Minus!",
-    },
-    {
-        name: "System Dummy 5",
-        title: "Lorem ipsum dolor sit",
-        quote: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt recusandae in, voluptates eligendi suscipit eum aliquid deleniti qui quibusdam culpa nobis consectetur, et dignissimos quos dolorem ex esse magni error officiis. Porro nisi, hic veritatis eaque ullam est sint, delectus vel et iste nesciunt, natus exercitationem voluptatum velit tempore. Minus!",
-    },
-];
+// export const testimonials = [
+//     {
+//         name: "System Dummy 1",
+//         title: "Lorem ipsum dolor sit",
+//         quote: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt recusandae in, voluptates eligendi suscipit eum aliquid deleniti qui quibusdam culpa nobis consectetur, et dignissimos quos dolorem ex esse magni error officiis. Porro nisi, hic veritatis eaque ullam est sint, delectus vel et iste nesciunt, natus exercitationem voluptatum velit tempore. Minus!",
+//     },
+//     {
+//         name: "System Dummy 2",
+//         title: "Lorem ipsum dolor sit",
+//         quote: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt recusandae in, voluptates eligendi suscipit eum aliquid deleniti qui quibusdam culpa nobis consectetur, et dignissimos quos dolorem ex esse magni error officiis. Porro nisi, hic veritatis eaque ullam est sint, delectus vel et iste nesciunt, natus exercitationem voluptatum velit tempore. Minus!",
+//     },
+//     {
+//         name: "System Dummy 3",
+//         title: "Lorem ipsum dolor sit",
+//         quote: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt recusandae in, voluptates eligendi suscipit eum aliquid deleniti qui quibusdam culpa nobis consectetur, et dignissimos quos dolorem ex esse magni error officiis. Porro nisi, hic veritatis eaque ullam est sint, delectus vel et iste nesciunt, natus exercitationem voluptatum velit tempore. Minus!",
+//     },
+//     {
+//         name: "System Dummy 4",
+//         title: "Lorem ipsum dolor sit",
+//         quote: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt recusandae in, voluptates eligendi suscipit eum aliquid deleniti qui quibusdam culpa nobis consectetur, et dignissimos quos dolorem ex esse magni error officiis. Porro nisi, hic veritatis eaque ullam est sint, delectus vel et iste nesciunt, natus exercitationem voluptatum velit tempore. Minus!",
+//     },
+//     {
+//         name: "System Dummy 5",
+//         title: "Lorem ipsum dolor sit",
+//         quote: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt recusandae in, voluptates eligendi suscipit eum aliquid deleniti qui quibusdam culpa nobis consectetur, et dignissimos quos dolorem ex esse magni error officiis. Porro nisi, hic veritatis eaque ullam est sint, delectus vel et iste nesciunt, natus exercitationem voluptatum velit tempore. Minus!",
+//     },
+// ];
 
 export const dataWorkProjectExperience = [
     {
         name: "Action Plan Management System",
         designation: "APMS",
-        quote: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla error consequuntur, eos tempore distinctio reiciendis delectus temporibus hic iusto voluptatibus.",
+        quote: "The Action Plan Management System is used to manage the implementation and monitoring of action performance and performance achievements across various departments in an office or institution in a structured and efficient manner.",
         src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
         name: "Indonesia Threat Index Analytics",
         designation: "INTIXS",
-        quote: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias repellendus facere quod mollitia reiciendis laudantium aut eligendi ex, molestiae obcaecati porro?",
+        quote: "This information system is designed to determine the national threat index thematically, considering all gatra aspects across regions in Indonesia to support analysis, decision-making, and strategic threat mitigation.",
         src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
         name: "Covid19 Tracking Analytics",
         designation: "CTA",
-        quote: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fugiat vero vel, doloribus quod sed ullam consequatur, magni labore corrupti adipisci odit.",
+        quote: "This information system is used to monitor and analyze COVID-19 data across all regions of Indonesia in real-time, supporting rapid response, decision-making, and effective pandemic management planning.",
         src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
         name: "Real-Time Integrated Monitoring for Burning Alert",
         designation: "RIMBA",
-        quote: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum rem officiis nulla, nam culpa voluptatem cupiditate aut reiciendis ea sunt totam placeat doloribus!",
+        quote: "This system predicts and anticipates forest and land fire-prone areas, detects suspected perpetrators, and is equipped with integrated and comprehensive impact analysis and air pollution index measurement.",
         src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
         name: "Public Involvement in Local Leadership, Accountability and Reform",
         designation: "PILLAR",
-        quote: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis veniam doloremque atque, aspernatur quasi pariatur, ratione a fugit explicabo optio magnam maxime ipsum beatae.",
+        quote: "This system maps community demographics, political actors, and social threats accurately and precisely as a strategic effort to support optimal election security measures across all regions in Indonesia.",
         src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
-    // {
-    //     name: "Inovastek Glomatra Indonesia",
-    //     designation: "VP of Technology at FutureNet",
-    //     quote: "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
-    //     src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    // },
+    {
+        name: "Inovastek Glomatra Indonesia",
+        designation: "IGI",
+        quote: "A digital technology consulting company based on weather and ocean prediction to support decision-making across various sectors such as agriculture, maritime, fisheries, disaster management, onshore and offshore mining, and others.",
+        src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
 ];
 
 export const companies = [

@@ -43,7 +43,7 @@ export const AnimatedTestimonials = ({testimonials, autoplay=false}: {testimonia
                 <div className="relative h-80 w-full">
                     <AnimatePresence>
                         {testimonials.map((testimonial, index) => (
-                            <motion.div key={testimonial.src}
+                            <motion.div key={index}
                                 initial={{
                                     opacity: 0,
                                     scale: 0.9,

@@ -87,23 +87,49 @@
     background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
   }
 
+  /* Main */
+  .bg-red-main {
+    --tw-bg-opacity: 1;
+    background-color: rgb(20, 0, 0);
+  }
+  .bg-red-1000 {
+    background-color: rgb(50, 0, 0);
+  }
+  .bg-red-1500 {
+    background-color: rgb(40, 0, 0);
+  }
+  .bg-red-2000 {
+    background-color: rgb(30, 0, 0);
+  }
+
+  /* Page - Hero */
+  /* .bg-red-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(20 0 0);
+  } */
+
+  
   /* Page - RecentPorjects */
-  .via-emerald-400\/90-red {
+  .shadow-3dpin{
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.4);
+  }
+
+  .via-emerald-400\/90-custom {
     --tw-gradient-to: rgb(52 211 153 / 0) var(--tw-gradient-to-position);
-    --tw-gradient-stops: var(--tw-gradient-from), rgba(255, 0, 0, 0.9) var(--tw-gradient-via-position), var(--tw-gradient-to);
+    --tw-gradient-stops: var(--tw-gradient-from), rgba(255, 255, 0, 0.9) var(--tw-gradient-via-position), var(--tw-gradient-to);
   }
-  .to-cyan-500-red{
-    --tw-gradient-to: #ff0000 var(--tw-gradient-to-position);
+  .to-cyan-500-custom{
+    --tw-gradient-to: #ffff00 var(--tw-gradient-to-position);
   }
-  .bg-cyan-600-red {
+  .bg-cyan-600-custom {
     --tw-bg-opacity: 1;
-    background-color: rgb(178 8 8);
+    background-color: rgb(178 178 8);
   }
-  .bg-cyan-300-red {
+  .bg-cyan-300-custom {
     --tw-bg-opacity: 1;
-    background-color: rgb(249 103 103);
+    background-color: rgb(249 249 103);
   }
-  .bg-sky-500\/\[0\.08\]-red {
-    background-color: rgba(233, 14, 14, 0.16);
+  .bg-sky-500\/\[0\.08\]-custom {
+    background-color: rgba(233, 233, 14, 0.16);
   }
 }

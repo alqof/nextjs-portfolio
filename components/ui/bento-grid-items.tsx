@@ -31,10 +31,12 @@ export const BentoGridItem = ({id, className, title, description, img, imgClassN
     };
 
     return (
-        <div className={cn("row-span-1 relative flex flex-col justify-between space-y-4 overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none", className)} style={{background:"rgb(4,7,29)", backgroundColor:"linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)"}}>
+        <div className={cn("row-span-1 relative flex flex-col justify-between space-y-4 overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none", className)} style={{background:"rgb(29, 4, 4)", backgroundColor:"linear-gradient(90deg, rgb(29, 4, 4) 0%, rgb(35, 12, 12) 100%)"}}>
             <div className={`${id===6 && "flex justify-center"} h-full`}>
                 <div className="absolute w-full h-full">
-                    { img && (<img src={img} alt={img} className={cn(imgClassName, "object-cover object-center")}/>) }
+                    { img && (
+                        <img src={img} alt={img} className={cn(imgClassName, "object-cover object-center")}/>
+                    )}
                 </div>
 
                 <div className={`absolute right-0 -bottom-5 ${id===5 && "w-full opacity-80"}`}>
@@ -53,23 +55,22 @@ export const BentoGridItem = ({id, className, title, description, img, imgClassN
                     <div className={`max-w-96 lg:max-w-1/2 text-lg lg:text-3xl font-sans font-bold z-10`}> {title} </div>
     
                     {/* Github Globe */}
-                    {/* {id===2 && <GlobeDemo />} */}
                     {id===2 && <GlobeGL />}
 
                     {id===3 && (
                         <div className="absolute w-fit -right-3 lg:-right-2 flex gap-1 lg:gap-5">
                             <div className="flex flex-col gap-3 md:gap-3 lg:gap-5">
                                 {leftLists.map((item, i) => (
-                                    <span key={i} className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
+                                    <span key={i} className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#2e2310]">
                                         {item}
                                     </span>
                                 ))}
-                                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+                                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#2e2310]"></span>
                             </div>
                             <div className="flex flex-col gap-3 md:gap-3 lg:gap-5">
-                                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+                                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#2e2310]"></span>
                                 {rightLists.map((item, i) => (
-                                    <span key={i} className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
+                                    <span key={i} className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#2e2310]">
                                         {item}
                                     </span>
                                 ))}
@@ -89,7 +90,7 @@ export const BentoGridItem = ({id, className, title, description, img, imgClassN
                                 />
                             </div>
 
-                            <MagicButton title={copied ? "Email is Copied!" : "Copy my email address"} icon={<IoCopyOutline />} position="left" handleClick={handleCopy} otherClasses="!bg-[#161A31]"/>
+                            <MagicButton title={copied ? "Email is Copied!" : "Copy my email address"} icon={<IoCopyOutline />} position="left" handleClick={handleCopy} otherClasses="!bg-[#320000]"/>
                         </div>
                     )}
                 </div>

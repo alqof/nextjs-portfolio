@@ -5,7 +5,7 @@ import Globe from 'globe.gl';
 
 const GlobeGL = ()=>{
     useEffect(()=>{
-        const N = 20;
+        const N = 21;
         const arcsData = [...Array(N).keys()].map(() => ({
             startLat: (Math.random() - 0.5) * 180,
             startLng: (Math.random() - 0.5) * 360,
@@ -26,10 +26,13 @@ const GlobeGL = ()=>{
                 .backgroundColor('#ffffff00')
                 .pointOfView({ lat: 0.64, lng: 115.28, altitude: 1.7 }) 
                 .showAtmosphere(true)
-                .atmosphereColor('lightskyblue')
+                .atmosphereColor('rgba(255,255,255,0.25)')
+                // .atmosphereColor('lightskyblue')
                 .atmosphereAltitude(0.17)
-                .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
+                .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
+                // .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
                 .arcsData(arcsData)
+                .arcAltitude(0.3)
                 .arcColor('color')
                 .arcDashLength(() => Math.random())
                 .arcDashGap(() => Math.random())
