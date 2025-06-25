@@ -269,18 +269,18 @@ export const workExperience = [
 export const socialMedia = [
     {
         img: "/insta.svg",
-        src: ""
+        src: "",
     },
     {
         img: "/twit.svg",
-        src: ""
+        src: "",
     },
     {
         img: "/git.svg",
-        src: "https://github.com/alqof"
+        src: "https://github.com/alqof",
     },
     {
         img: "/link.svg",
-        src: "https://www.linkedin.com/in/alqof-nur-aji-b3a8b4200/"
+        src: "https://www.linkedin.com/in/alqof-nur-aji-b3a8b4200/",
     },
 ];
