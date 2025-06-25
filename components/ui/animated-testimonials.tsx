@@ -40,7 +40,7 @@ export const AnimatedTestimonials = ({testimonials, autoplay=false}: {testimonia
     return (
         <div className="w-full px-4 py-28 md:px-8 lg:px-12 antialiased">
             <div className="relative grid grid-cols-1 md:grid-cols-2 gap-20">
-                <div className="relative h-80 w-full">
+                <div className="relative h-48 md:h-80 w-full">
                     <AnimatePresence>
                         {testimonials.map((testimonial, index) => (
                             <motion.div key={index}
@@ -71,8 +71,8 @@ export const AnimatedTestimonials = ({testimonials, autoplay=false}: {testimonia
                                 className="absolute inset-0 origin-bottom"
                             >
                                 <img
-                                    // src={testimonial.src}
-                                    src="/p2.svg"
+                                    src={testimonial.src}
+                                    // src="/p2.svg"
                                     alt={testimonial.name}
                                     // width={800}
                                     // height={500}

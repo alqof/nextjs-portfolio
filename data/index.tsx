@@ -136,40 +136,48 @@ export const projects = [
 
 export const dataWorkProjectExperience = [
     {
-        name: "Action Plan Management System",
-        designation: "APMS",
+        name: "APMS",
+        designation: "Action Plan Management System",
         quote: "The Action Plan Management System is used to manage the implementation and monitoring of action performance and performance achievements across various departments in an office or institution in a structured and efficient manner.",
-        src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        src: "/e-apms.jpg",
     },
     {
-        name: "Indonesia Threat Index Analytics",
-        designation: "INTIXS",
+        name: "INTIXS",
+        designation: "Indonesia Threat Index Analytics",
         quote: "This information system is designed to determine the national threat index thematically, considering all gatra aspects across regions in Indonesia to support analysis, decision-making, and strategic threat mitigation.",
-        src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        src: "/e-intixs.jpg",
     },
     {
-        name: "Covid19 Tracking Analytics",
-        designation: "CTA",
-        quote: "This information system is used to monitor and analyze COVID-19 data across all regions of Indonesia in real-time, supporting rapid response, decision-making, and effective pandemic management planning.",
-        src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-        name: "Real-Time Integrated Monitoring for Burning Alert",
-        designation: "RIMBA",
-        quote: "This system predicts and anticipates forest and land fire-prone areas, detects suspected perpetrators, and is equipped with integrated and comprehensive impact analysis and air pollution index measurement.",
-        src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-        name: "Public Involvement in Local Leadership, Accountability and Reform",
-        designation: "PILLAR",
+        name: "PILLAR",
+        designation: "Political and Electoral Strategy",
         quote: "This system maps community demographics, political actors, and social threats accurately and precisely as a strategic effort to support optimal election security measures across all regions in Indonesia.",
-        src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        src: "/e-pillar.jpg",
     },
     {
-        name: "Inovastek Glomatra Indonesia",
-        designation: "IGI",
+        name: "LACAKCOVID19",
+        designation: "Covid19 Tracking Analytics",
+        quote: "This information system is used to monitor and analyze COVID-19 data across all regions of Indonesia in real-time, supporting rapid response, decision-making, and effective pandemic management planning.",
+        src: "/e-lacakcovid19.jpg",
+    },
+    {
+        name: "TANGKALWABAH",
+        designation: "Epidemic Early Warning and Mitigation System",
+        // designation: "Sistem Terintegrasi Pemantauan dan Penanggulangan Epidemi",
+        // designation: "Pusat Data dan Tindakan Cepat untuk Epidemi",
+        quote: "Epidemic Early Warning and Mitigation Platform is a data-driven system designed to detect potential outbreaks early, analyze real-time health trends, and coordinate rapid, effective responses to minimize public health risks and impacts.",
+        src: "/e-tangkalwabah.jpg",
+    },
+    {
+        name: "RIMBA",
+        designation: "Real-Time Integrated Monitoring for Burning Alert",
+        quote: "This system predicts and anticipates forest and land fire-prone areas, detects suspected perpetrators, and is equipped with integrated and comprehensive impact analysis and air pollution index measurement.",
+        src: "/e-rimba.jpg",
+    },
+    {
+        name: "IGI",
+        designation: "Inovastek Glomatra Indonesia",
         quote: "A digital technology consulting company based on weather and ocean prediction to support decision-making across various sectors such as agriculture, maritime, fisheries, disaster management, onshore and offshore mining, and others.",
-        src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        src: "/e-igi.jpg",
     },
 ];
 
