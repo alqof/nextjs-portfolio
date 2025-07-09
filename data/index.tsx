@@ -175,7 +175,7 @@ export const dataWorkProjectExperience = [
     },
     {
         name: "IGI",
-        designation: "Inovastek Glomatra Indonesia",
+        designation: "Company Profile: Inovastek Glomatra Indonesia",
         quote: "A digital technology consulting company based on weather and ocean prediction to support decision-making across various sectors such as agriculture, maritime, fisheries, disaster management, onshore and offshore mining, and others.",
         src: "/e-igi.jpg",
     },

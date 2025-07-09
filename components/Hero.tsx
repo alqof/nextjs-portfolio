@@ -27,7 +27,7 @@ const Hero = ()=>{
 
                         <TextGenerateEffect words="Transforming Concepts into Seamless User Experiences" className="text-center text-3xl md:text-5xl lg:text-6xl"/>
 
-                        <p className="text-center md:tracking-wider mb-4 text-[12px] md:text-lg lg:text-2xl"> 
+                        <p className="text-center md:tracking-wider mb-4 text-[12px] md:text-lg lg:text-2xl">
                             Hi! I&apos;m Alqof, Web Developer based in South Jakarta 🇮🇩
                         </p>
 
