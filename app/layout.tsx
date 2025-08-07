@@ -30,9 +30,9 @@ export default function RootLayout({children}: Readonly<{children:React.ReactNod
 			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
 				<ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
 					{children}
-					<div className="absolute top-1 right-1">
+					{/* <div className="absolute top-1 right-1">
 						<ThemeToggle />
-					</div>
+					</div> */}
 				</ThemeProvider>
 			</body>
 		</html>
