@@ -31,7 +31,7 @@ export const BentoGridItem = ({id, className, title, description, img, imgClassN
     };
 
     return (
-        <div className={cn("row-span-1 relative flex flex-col justify-between space-y-4 overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none", className)} style={{background:"rgb(29, 4, 4)", backgroundColor:"linear-gradient(90deg, rgb(29, 4, 4) 0%, rgb(35, 12, 12) 100%)"}}>
+        <div className={cn("row-span-1 relative flex flex-col justify-between space-y-4 overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none", className)} style={{background:"rgb(0, 10, 0)", backgroundColor:"linear-gradient(90deg, rgb(29, 4, 4) 0%, rgb(35, 12, 12) 100%)"}}>
             <div className={`${id===6 && "flex justify-center"} h-full`}>
                 <div className="absolute w-full h-full">
                     { img && (
@@ -44,14 +44,13 @@ export const BentoGridItem = ({id, className, title, description, img, imgClassN
                 </div>
 
                 {id===6 && (
-                    // Gradient Animation
                     <BackgroundGradientAnimation>
                         <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
                     </BackgroundGradientAnimation>
                 )}
 
-                <div className={cn(titleClassName, "relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10 group-hover/bento:translate-x-2 transition duration-200")}>
-                    <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10"> {description} </div>
+                <div className={cn(titleClassName, "relative min-h-40 md:h-full p-5 lg:p-10 flex flex-col px-5 group-hover/bento:translate-x-2 transition duration-200")}>
+                    <div className="font-sans font-extralight md:max-w-32 text-sm md:text-xs lg:text-base text-[#C1C2D3] z-10"> {description} </div>
                     <div className={`max-w-96 lg:max-w-1/2 text-lg lg:text-3xl font-sans font-bold z-10`}> {title} </div>
     
                     {/* Github Globe */}
@@ -81,16 +80,11 @@ export const BentoGridItem = ({id, className, title, description, img, imgClassN
                     {id===6 && (
                         <div className="relative mt-5">
                             <div className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"}`}>
-                                <Lottie 
-                                    animationData={animationData} 
-                                    loop={copied} 
-                                    autoplay={copied} 
-                                    height={200} 
-                                    width={400}
-                                />
+                                <Lottie  animationData={animationData}  loop={copied}  autoplay={copied}  height={200}  width={400} />
                             </div>
 
-                            <MagicButton title={copied ? "Email is Copied!" : "Copy my email address"} icon={<IoCopyOutline />} position="left" handleClick={handleCopy} otherClasses="!bg-[#320000]"/>
+                            <MagicButton title={copied ? "Email is Copied!" : "Copy my email address"} icon={<IoCopyOutline />} position="left" handleClick={handleCopy}/>
+                            {/* <MagicButton title={copied ? "Email is Copied!" : "Copy my email address"} icon={<IoCopyOutline />} position="left" handleClick={handleCopy} otherClasses="!bg-[#320000]"/> */}
                         </div>
                     )}
                 </div>

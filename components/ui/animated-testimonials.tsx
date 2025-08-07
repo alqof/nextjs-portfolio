@@ -39,7 +39,7 @@ export const AnimatedTestimonials = ({testimonials, autoplay=false}: {testimonia
 
     return (
         <div className="w-full px-4 py-28 md:px-8 lg:px-12 antialiased">
-            <div className="relative grid grid-cols-1 md:grid-cols-2 gap-20">
+            <div className="relative grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
                 <div className="relative h-48 md:h-80 w-full">
                     <AnimatePresence>
                         {testimonials.map((testimonial, index) => (
@@ -106,7 +106,7 @@ export const AnimatedTestimonials = ({testimonials, autoplay=false}: {testimonia
                     >
                         <h3 className="text-2xl font-bold text-black dark:text-white"> {testimonials[active].name} </h3>
                         <p className="text-sm text-gray-500 dark:text-neutral-500 italic"> {testimonials[active].designation} </p>
-                        <motion.p className="mt-8 text-lg text-gray-500 dark:text-neutral-300">
+                        <motion.p className="mt-6 text-lg text-gray-500 dark:text-neutral-300">
                             {testimonials[active].quote.split(" ").map((word, index) => (
                                 <motion.span key={index}
                                     initial={{
@@ -132,7 +132,7 @@ export const AnimatedTestimonials = ({testimonials, autoplay=false}: {testimonia
                         </motion.p>
                     </motion.div>
 
-                    <div className="flex gap-4 pt-12 md:pt-0">
+                    <div className="flex gap-4 pt-6 md:pt-0">
                         <button onClick={handlePrev} className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800">
                             <IconArrowLeft className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:rotate-12 dark:text-neutral-400" />
                         </button>

@@ -10,9 +10,7 @@ const WorkProjectExperience = () => {
         <section id="experience">
             <div className="py-20">
                 <h1 className="heading">
-                    Highlighted projects from my <span className="text-red-400">career experience</span>
-                    {/* Showcase of selected projects from <span className="hidden md:inline"><br /></span>my <span className="text-red-400">professional experience</span> */}
-                    {/* Kind systems from <span className="text-red-400"> work experience </span> */}
+                    Highlighted projects from my <span className="text-green-300">career experience</span>
                 </h1>
 
                 <AnimatedTestimonials testimonials={dataWorkProjectExperience} />

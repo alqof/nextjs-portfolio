@@ -18,7 +18,7 @@ export const PinContainer = ({children, title, href, className, containerClassNa
   return (
     <Link className={cn("relative group/pin z-50 cursor-pointer", containerClassName)} href={href || "/"} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} onClick={onClick}>
       <div className="absolute left-1/2 top-1/2 ml-[0.09375rem] mt-4 -translate-x-1/2 -translate-y-1/2" style={{perspective: "1000px", transform: "rotateX(70deg) translateZ(0deg)",}}>
-        <div className="absolute left-1/2 top-1/2 flex justify-start items-start rounded-2xl shadow-[0_8px_16px_rgb(0_0_0/0.4)] bg-red-1500 border border-white/[0.2] group-hover/pin:border-white/[0.1] group-hover/pin:shadow-3dpin transition duration-700 overflow-hidden" style={{transform: transform}}>
+        <div className="absolute left-1/2 top-1/2 flex justify-start items-start rounded-2xl shadow-[0_8px_16px_rgb(0_0_0/0.4)] bg-custom-1500 border border-white/[0.2] group-hover/pin:border-white/[0.1] group-hover/pin:shadow-3dpin transition duration-700 overflow-hidden" style={{transform: transform}}>
           <div className={cn("relative z-50 ", className)}> 
             {children} 
           </div>
@@ -32,7 +32,7 @@ export const PinContainer = ({children, title, href, className, containerClassNa
 
 export const PinPerspective = ({title}: {title?: string}) => {
   return (
-    <motion.div className="pointer-events-none  w-96 h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
+    <motion.div className="pointer-events-none w-96 h-80 opacity-0 group-hover/pin:opacity-100 z-[60] transition duration-500">
       <div className="w-full h-full -mt-7 flex-none inset-0">
         <div className="absolute top-0 inset-x-0  flex justify-center">
           <span className="relative flex z-10 space-x-2 items-center rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10" style={{boxShadow: "inset 0px 0px 5px #fff4"}}>
