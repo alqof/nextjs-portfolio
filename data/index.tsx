@@ -209,8 +209,7 @@ export const companies = [
     {
         id: 5,
         name: "cloudinary",
-        img: "/cloudinary-icon.svg",
-        // img: "/cloudinary.svg",
+        img: "/icon-cloudinary.svg",
         imgName: "/cloudName.svg",
     },
     {
@@ -225,12 +224,6 @@ export const companies = [
         img: "/app.svg",
         imgName: "/appName.svg",
     },
-    // {
-    //     id: 8,
-    //     name: "stream",
-    //     img: "/s.svg",
-    //     imgName: "/streamName.svg",
-    // },
 ];
 
 export const workExperience = [
