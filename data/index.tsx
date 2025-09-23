@@ -74,14 +74,22 @@ export const gridItems = [
 export const projects = [
     {
         id: 1,
-        title: "ACME - Simple Dashboard Management",
-        des: "This is a foundational application built with Next.js App Router, designed to display, manage, and monitor information effectively as part of the Next.js Learn Course.",
-        img: "/p-acme.svg",
-        iconLists: ["/icon-next.svg", "/icon-tailwind.svg", "/icon-ts.svg", "/icon-postgresql.svg"],
-        link: "https://nextjs-dashboard-nine-chi.vercel.app/",
+        title: "REZPYAI - Rezume Analyzer Powered by AI",
+        des: "A resume analyzer app built with React Router, Vite, and Puter.js, enabling users to upload and analyze resumes using AI for instant feedback and insights.",
+        img: "/p-rezpyai.svg",
+        iconLists: ["/icon-react.svg", "/icon-vite.svg", "/icon-ts.svg", "/icon-tailwind.svg", "/icon-puterjs.svg"],
+        link: "https://vite-ai-resume-analyzer.vercel.app/",
     },
     {
-        id: 4,
+        id: 2,
+        title: "Intellicaxt - AI Image SaaS",
+        des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
+        img: "/p-intellicaxt.svg",
+        iconLists: ["/icon-next.svg", "/icon-tailwind.svg", "/icon-ts.svg", "/icon-cloudinary.svg", "/icon-clerk.svg", "/icon-mongodb.svg"],
+        link: "https://nextjs-intellicaxt.vercel.app/",
+    },
+    {
+        id: 3,
         title: "Qashless - Realtime Point of Sales",
         des: "Empower your restaurant with seamless realtime transactions and efficient management for superior customer payment experience.",
         img: "/p-qashless.svg",
@@ -89,22 +97,14 @@ export const projects = [
         link: "https://nextjs-realtimepointofsales.vercel.app/",
     },
     {
-        id: 2,
+        id: 4,
         title: "Apple - Iphone 15 Pro 3D Website",
         des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects.",
         img: "/p-apple.svg",
         iconLists: ["/icon-vite.svg", "/icon-tailwind.svg", "/icon-ts.svg", "/icon-three.svg", "/icon-gsap.svg"],
         link: "https://vite-iphone15.vercel.app/",
     },
-    {
-        id: 3,
-        title: "Intellicaxt - AI Image SaaS",
-        des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-        img: "/p-intellicaxt.svg",
-        iconLists: ["/icon-next.svg", "/icon-tailwind.svg", "/icon-ts.svg", "/icon-cloudinary.svg", "/icon-clerk.svg", "/icon-mongodb.svg"],
-        link: "https://nextjs-intellicaxt.vercel.app/",
-    },
-    ];
+];
 
 // export const testimonials = [
 //     {
