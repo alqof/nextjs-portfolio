@@ -17,11 +17,13 @@ export function Button({
 }: {
     borderRadius?: string;
     children: React.ReactNode;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     as?: any;
     containerClassName?: string;
     borderClassName?: string;
     duration?: number;
     className?: string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     [key: string]: any;
 }) {
     return (
@@ -50,6 +52,7 @@ export const MovingBorder = ({
     duration?: number;
     rx?: string;
     ry?: string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     [key: string]: any;
 }) => {
     const pathRef = useRef<SVGRectElement | null>(null);

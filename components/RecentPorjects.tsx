@@ -14,7 +14,7 @@ const RecentPorjects = () => {
                 <div className="flex flex-wrap items-center justify-center p-4 gap-10 mt-10">
                     {projects.map((item) => (
                         <div key={item.id} className="w-[90vw] md:w-[28rem] h-[25rem] md:min-h-[30rem] flex items-center justify-center">
-                            <PinContainer title={item.link} href={item.link} onClick={(e: any) => {e.preventDefault(); window.open(item.link, "_blank")}}>
+                            <PinContainer title={item.link} href={item.link} onClick={(e?: React.MouseEvent<HTMLAnchorElement>) => {e?.preventDefault(); window.open(item.link, "_blank")}}>
                                 <div className="w-[90vw] md:w-[28rem] h-[25rem] md:h-[30rem] p-4 flex flex-col justify-between">
                                     <div className="relative w-full h-[12rem] md:h-[15rem] mb-2 flex items-center justify-center overflow-hidden">
                                         <div className="relative w-full h-full rounded-xl overflow-hidden" style={{backgroundColor: "#23132d"}}>
