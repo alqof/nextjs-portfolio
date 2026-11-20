@@ -1,5 +1,3 @@
-'use client'
-import React from 'react'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/text-generate-effect'
 import MagicButton from './ui/MagicButton'
@@ -35,9 +33,7 @@ const Hero = () => {
                             Hi! I&apos;m Alqof, Web Developer based in South Jakarta 🇮🇩
                         </p>
 
-                        <a href="#about">
-                            <MagicButton title="Show my work" icon={<FaLocationArrow />} position="right" />
-                        </a>
+                        <MagicButton href="#about" title="Show my work" icon={<FaLocationArrow />} position="right" />
                     </div>
                 </div>
             </div>

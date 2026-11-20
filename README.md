@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+﻿# Alqof's Portfolio
 
-## Getting Started
+A personal portfolio for Alqof Nur Aji, a web developer based in South Jakarta. It showcases selected projects, professional experience, a development approach, and contact information.
 
-First, run the development server:
+Built with Next.js 16 (App Router), React 19, TypeScript, and Tailwind CSS. Motion, Three.js, and Globe.gl power the interactive elements.
+
+## Run locally
+
+Use Node.js **20.9 or later** and **pnpm 10**. The portfolio does not require an environment file or API keys.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+git clone https://github.com/alqof/nextjs-portfolio.git
+cd nextjs-portfolio
+pnpm install --frozen-lockfile
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Checks and production preview
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | What it does |
+| --- | --- |
+| `pnpm lint` | Runs ESLint across the repository. |
+| `pnpm audit` | Checks the dependency lockfile for known advisories. |
+| `pnpm build` | Type-checks the project and creates a production build. |
+| `pnpm start` | Serves the production build locally after `pnpm build`. |
 
-## Learn More
+The build may need access to Google Fonts to fetch Geist. The home page is prerendered. For a production deployment, use a Next.js-compatible host so the headers configured in [next.config.ts](next.config.ts) and the built-in image optimizer are served.
 
-To learn more about Next.js, take a look at the following resources:
+## Update the portfolio
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| What to change | Where to edit |
+| --- | --- |
+| Projects, work history, navigation, contact email, and social links | [data/index.tsx](data/index.tsx) |
+| Homepage section order | [app/page.tsx](app/page.tsx) |
+| Introduction and profile copy | [components/Hero.tsx](components/Hero.tsx) |
+| Page title, description, and fonts | [app/layout.tsx](app/layout.tsx) |
+| Global styles and theme tokens | [app/globals.css](app/globals.css), [tailwind.config.ts](tailwind.config.ts) |
+| Screenshots, logos, and icons | [public/](public/) |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+When adding an image to `public/`, reference it from the site root. For example, `public/project.jpg` becomes `/project.jpg` in the project data.

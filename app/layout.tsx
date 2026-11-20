@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
-import { ThemeToggle } from "@/components/theme-toggle";
 
 
 const geistSans = Geist({
@@ -30,9 +29,6 @@ export default function RootLayout({children}: Readonly<{children:React.ReactNod
 			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
 				<ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
 					{children}
-					{/* <div className="absolute top-1 right-1">
-						<ThemeToggle />
-					</div> */}
 				</ThemeProvider>
 			</body>
 		</html>

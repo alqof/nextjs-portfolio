@@ -35,7 +35,7 @@ export const FloatingNav = ({navItems, className}: {navItems: {name:string; link
         style={{backdropFilter: "blur(16px) saturate(180%)", backgroundColor: "rgba(30,30,30, 0.7)", border: "2px solid rgba(255, 255, 255, 0.2)", boxShadow: "0px 0px 16px #fff4"}}
       >
         {navItems.map((navItem: {name:string; link:string; icon?:JSX.Element}, idx:number) => (
-          <Link key={`link=${idx}`} href={navItem.link} className={cn("relative flex items-center space-x-1 text-neutral-600 dark:text-neutral-50 dark:hover:text-neutral-300 hover:text-neutral-500")}>
+          <Link key={`link=${idx}`} href={navItem.link} aria-label={navItem.name} className={cn("relative flex items-center space-x-1 text-neutral-600 dark:text-neutral-50 dark:hover:text-neutral-300 hover:text-neutral-500")}>
             {navItem.name==='Home' 
               ? <FaHome /> 
               : (

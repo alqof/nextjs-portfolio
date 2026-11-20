@@ -1,3 +1,5 @@
+export const contactEmail = "alqofnuraji@gmail.com";
+
 export const navItems = [
     { name: "Home", link: "#home" },
     { name: "About", link: "#about" },
@@ -261,18 +263,22 @@ export const workExperience = [
 
 export const socialMedia = [
     {
+        name: "Instagram",
         img: "/insta.svg",
         src: "",
     },
     {
+        name: "X",
         img: "/twit.svg",
         src: "",
     },
     {
+        name: "GitHub",
         img: "/git.svg",
         src: "https://github.com/alqof",
     },
     {
+        name: "LinkedIn",
         img: "/link.svg",
         src: "https://www.linkedin.com/in/alqof-nur-aji-b3a8b4200/",
     },

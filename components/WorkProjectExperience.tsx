@@ -1,6 +1,3 @@
-"use client";
-
-import React from "react";
 import { companies, dataWorkProjectExperience } from "@/data";
 import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 import { AnimatedTestimonials } from "./ui/animated-testimonials";
@@ -20,16 +17,6 @@ const WorkProjectExperience = () => {
                         <InfiniteMovingCards items={companies} direction="left" speed="fast"/>
                     </div>
 
-                    {/* <div className="flex flex-wrap items-center justify-center md:gap-x-24 md:gap-y-16 gap-6 max-lg:mt-10">
-                        {companies.map((company) => (
-                            <React.Fragment key={company.id}>
-                                <div className="flex md:max-w-60 max-w-32 gap-x-3">
-                                    <img src={company.img} alt={company.name} className="md:w-10 w-5"/>
-                                    <img src={company.imgName} alt={company.name} className="md:w-24 w-20"/>
-                                </div>
-                            </React.Fragment>
-                        ))}
-                    </div> */}
                 </div>
             </div>
         </section>

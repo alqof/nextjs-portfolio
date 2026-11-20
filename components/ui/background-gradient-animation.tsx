@@ -94,6 +94,8 @@ export const BackgroundGradientAnimation = (
 
     const [isSafari, setIsSafari] = useState(false);
     useEffect(() => {
+      // The browser-specific filter is selected after hydration.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsSafari(/^((?!chrome|android).)*safari/i.test(navigator.userAgent));
     }, []);
 

@@ -1,34 +1,30 @@
 "use client";
 
-import React from "react";
+import type { ReactNode } from "react";
 import { motion, useAnimationFrame, useMotionTemplate, useMotionValue, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { cn } from "@/lib/utils";
 
-export function Button({
+export function MovingBorderCard({
     borderRadius = "1.75rem",
     children,
-    as: Component = "button",
     containerClassName,
     borderClassName,
     duration,
     className,
-    ...otherProps
+    backgroundColor,
 }: {
     borderRadius?: string;
-    children: React.ReactNode;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    as?: any;
+    children: ReactNode;
+    backgroundColor?: string;
     containerClassName?: string;
     borderClassName?: string;
     duration?: number;
     className?: string;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    [key: string]: any;
 }) {
     return (
-        <Component className={cn("bg-transparent relative text-xl p-[1px] overflow-hidden md:col-span-2 md:row-span-1", containerClassName)} style={{borderRadius: borderRadius}} {...otherProps}>
-            <div className="absolute inset-0 rounde-[1.75rem]" style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}>
+        <div className={cn("relative text-xl p-[1px] overflow-hidden md:col-span-2 md:row-span-1", containerClassName)} style={{ borderRadius, backgroundColor }}>
+            <div aria-hidden="true" className="absolute inset-0 motion-reduce:hidden" style={{ borderRadius: `calc(${borderRadius} * 0.96)` }}>
                 <MovingBorder duration={duration} rx="30%" ry="30%">
                     <div className={cn("h-20 w-20 opacity-[0.8] bg-[radial-gradient(#FFFFFF_40%,transparent_60%)]", borderClassName)}/>
                 </MovingBorder>
@@ -37,7 +33,7 @@ export function Button({
             <div className={cn("relative bg-slate-900/[0] backdrop-blur-xl text-white flex items-center justify-center w-full h-full text-sm antialiased", className)} style={{borderRadius: `calc(${borderRadius} * 0.96)`, boxShadow: "inset 0px 0px 10px #0f03"}}>
                 {children}
             </div>
-        </Component>
+        </div>
     );
 }
 
@@ -46,14 +42,11 @@ export const MovingBorder = ({
     duration = 2000,
     rx,
     ry,
-    ...otherProps
 }: {
-    children: React.ReactNode;
+    children: ReactNode;
     duration?: number;
     rx?: string;
     ry?: string;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    [key: string]: any;
 }) => {
     const pathRef = useRef<SVGRectElement | null>(null);
     const progress = useMotionValue<number>(0);
@@ -85,7 +78,6 @@ export const MovingBorder = ({
                 className="absolute h-full w-full"
                 width="100%"
                 height="100%"
-                {...otherProps}
             >
                 <rect
                 fill="none"

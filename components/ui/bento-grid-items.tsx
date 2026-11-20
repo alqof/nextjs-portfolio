@@ -1,6 +1,9 @@
 "use client";
 
+import Image from "next/image";
+
 import { useState } from "react";
+import { contactEmail } from "@/data";
 import { IoCopyOutline } from "react-icons/io5";
 import animationData from "@/data/confetti.json";
 import { cn } from "@/lib/utils";
@@ -23,24 +26,28 @@ export const BentoGridItem = ({id, className, title, description, img, imgClassN
     const leftLists = ["ReactJS", "Express", "Typescript"];
     const rightLists = ["Vite", "NextJS", "PostgreSQL"];
 
-    const [copied, setCopied] = useState(false);
-    const handleCopy = ()=>{
-        const text = "alqofnuraji@gmail.com";
-        navigator.clipboard.writeText(text);
-        setCopied(true);
-    };
+    const [copyStatus, setCopyStatus] = useState<"idle" | "copied" | "error">("idle");
+
+    async function handleCopy() {
+        try {
+            await navigator.clipboard.writeText(contactEmail);
+            setCopyStatus("copied");
+        } catch {
+            setCopyStatus("error");
+        }
+    }
 
     return (
-        <div className={cn("row-span-1 relative flex flex-col justify-between space-y-4 overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none", className)} style={{background:"rgb(0, 10, 0)", backgroundColor:"linear-gradient(90deg, rgb(29, 4, 4) 0%, rgb(35, 12, 12) 100%)"}}>
+        <div className={cn("row-span-1 relative flex flex-col justify-between space-y-4 overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none", className)} style={{backgroundColor: "rgb(0, 10, 0)"}}>
             <div className={`${id===6 && "flex justify-center"} h-full`}>
                 <div className="absolute w-full h-full">
                     { img && (
-                        <img src={img} alt={img} className={cn(imgClassName, "object-cover object-center")}/>
+                        <Image src={img} alt="" width={1600} height={1067} sizes="(min-width: 1024px) 60vw, 100vw" className={cn(imgClassName, "object-cover object-center")} />
                     )}
                 </div>
 
                 <div className={`absolute right-0 -bottom-5 ${id===5 && "w-full opacity-80"}`}>
-                    { spareImg && (<img src={spareImg} alt={spareImg} className="w-full h-full object-cover object-center" />) }
+                    { spareImg && (<Image src={spareImg} alt="" width={640} height={400} className="w-full h-full object-cover object-center" />) }
                 </div>
 
                 {id===6 && (
@@ -79,12 +86,16 @@ export const BentoGridItem = ({id, className, title, description, img, imgClassN
 
                     {id===6 && (
                         <div className="relative mt-5">
-                            <div className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"}`}>
-                                <Lottie  animationData={animationData}  loop={copied}  autoplay={copied}  height={200}  width={400} />
+                            {copyStatus === "copied" && (
+                                <div aria-hidden="true" className="pointer-events-none absolute -bottom-5 right-0 motion-reduce:hidden">
+                                    <Lottie animationData={animationData} loop={false} className="h-[200px] w-[400px]" />
+                                </div>
+                            )}
+                            <MagicButton title="Copy my email address" icon={<IoCopyOutline />} position="left" onClick={handleCopy} />
+                            <div role="status">
+                                {copyStatus === "copied" && "Email address copied."}
+                                {copyStatus === "error" && <a href={`mailto:${contactEmail}`}>Copy failed. Email {contactEmail} instead.</a>}
                             </div>
-
-                            <MagicButton title={copied ? "Email is Copied!" : "Copy my email address"} icon={<IoCopyOutline />} position="left" handleClick={handleCopy}/>
-                            {/* <MagicButton title={copied ? "Email is Copied!" : "Copy my email address"} icon={<IoCopyOutline />} position="left" handleClick={handleCopy} otherClasses="!bg-[#320000]"/> */}
                         </div>
                     )}
                 </div>

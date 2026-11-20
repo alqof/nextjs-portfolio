@@ -9,6 +9,8 @@ export function ThemeSwitcher() {
   const { theme, setTheme } = useTheme()
 
   useEffect(() => {
+    // Keep the server and initial client markup aligned before reading the theme.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true)
   }, [])
 

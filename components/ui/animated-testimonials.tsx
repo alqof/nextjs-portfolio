@@ -1,8 +1,10 @@
 "use client";
 
+import Image from "next/image";
+
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 type Testimonial = {
     quote: string;
@@ -12,17 +14,11 @@ type Testimonial = {
 };
 
 export const AnimatedTestimonials = ({testimonials, autoplay=false}: {testimonials: Testimonial[]; autoplay?: boolean;}) => {
-    const [active, setActive] = useState(0);
-    const [randomRotations, setRandomRotations] = useState<number[]>(() => Array(testimonials.length).fill(0));
-
-    // Only generate random rotations on the client after mount
-    useEffect(() => {
-        setRandomRotations(testimonials.map(() => Math.floor(Math.random() * 21) - 10));
-    }, [testimonials.length]);
-
-    const handleNext = () => {
+    const [activeIndex, setActive] = useState(0);
+    const active = testimonials.length ? activeIndex % testimonials.length : 0;
+    const handleNext = useCallback(() => {
         setActive((prev) => (prev + 1) % testimonials.length);
-    };
+    }, [testimonials.length]);
     const handlePrev = () => {
         setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
     };
@@ -31,11 +27,13 @@ export const AnimatedTestimonials = ({testimonials, autoplay=false}: {testimonia
     };
 
     useEffect(() => {
-        if (autoplay) {
+        if (autoplay && testimonials.length > 1) {
             const interval = setInterval(handleNext, 5000);
             return () => clearInterval(interval);
         }
-    }, [autoplay]);
+    }, [autoplay, handleNext, testimonials.length]);
+
+    if (testimonials.length === 0) return null;
 
     return (
         <div className="w-full px-4 py-28 md:px-8 lg:px-12 antialiased">
@@ -48,13 +46,13 @@ export const AnimatedTestimonials = ({testimonials, autoplay=false}: {testimonia
                                     opacity: 0,
                                     scale: 0.9,
                                     z: -100,
-                                    rotate: randomRotations[index],
+                                    rotate: ((index * 13 + 7) % 21) - 10,
                                 }}
                                 animate={{
                                     opacity: isActive(index) ? 1 : 0.7,
                                     scale: isActive(index) ? 1 : 0.95,
                                     z: isActive(index) ? 0 : -100,
-                                    rotate: isActive(index) ? 0 : randomRotations[index],
+                                    rotate: isActive(index) ? 0 : ((index * 13 + 7) % 21) - 10,
                                     zIndex: isActive(index) ? 40 : testimonials.length + 2 - index,
                                     y: isActive(index) ? [0, -80, 0] : 0,
                                 }}
@@ -62,7 +60,7 @@ export const AnimatedTestimonials = ({testimonials, autoplay=false}: {testimonia
                                     opacity: 0,
                                     scale: 0.9,
                                     z: 100,
-                                    rotate: randomRotations[index],
+                                    rotate: ((index * 13 + 7) % 21) - 10,
                                 }}
                                 transition={{
                                     duration: 0.4,
@@ -70,15 +68,13 @@ export const AnimatedTestimonials = ({testimonials, autoplay=false}: {testimonia
                                 }}
                                 className="absolute inset-0 origin-bottom"
                             >
-                                <img
+                                <Image
                                     src={testimonial.src}
-                                    // src="/p2.svg"
                                     alt={testimonial.name}
-                                    // width={800}
-                                    // height={500}
+                                    fill
+                                    sizes="(min-width: 768px) 50vw, 100vw"
                                     draggable={false}
-                                    className="h-full w-full rounded-3xl object-cover object-center"
-                                    style={{width: "100%"}}
+                                    className="rounded-3xl object-cover object-center"
                                 />
                             </motion.div>
                         ))}
@@ -133,11 +129,11 @@ export const AnimatedTestimonials = ({testimonials, autoplay=false}: {testimonia
                     </motion.div>
 
                     <div className="flex gap-4 pt-6 md:pt-0">
-                        <button onClick={handlePrev} className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800">
+                        <button type="button" aria-label="Previous project" onClick={handlePrev} className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800">
                             <IconArrowLeft className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:rotate-12 dark:text-neutral-400" />
                         </button>
 
-                        <button onClick={handleNext} className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800">
+                        <button type="button" aria-label="Next project" onClick={handleNext} className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800">
                             <IconArrowRight className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:-rotate-12 dark:text-neutral-400" />
                         </button>
                     </div>
